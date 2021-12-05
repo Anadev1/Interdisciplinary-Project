@@ -2,7 +2,7 @@ import loader from "../components/loader.js";
 import router from "../router.js";
 import service from "../service.js";
 
-export default class FeedPage {
+export default class AroundYouPage {
   constructor(id) {
     this.id = id;
     this.render();

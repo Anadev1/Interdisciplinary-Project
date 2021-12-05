@@ -1,13 +1,14 @@
+import FeedPage from "./pages/feed.js";
+import IntroPage from "./pages/intro.js";
 import SignupPage from "./pages/signup.js";
 import LoginPage from "./pages/login.js";
 import PreferencesPage from "./pages/preferences.js";
-import FeedPage from "./pages/feed.js";
+import AroundYouPage from "./pages/aroundyou.js";
 import ItemPage from "./pages/item.js";
-import CategoryPage from "./pages/category.js";
-import AddItemPage from "./pages/addItem.js";
+import AddItemPage from "./pages/additem.js";
 import MapPage from "./pages/map.js";
 import ProfilePage from "./pages/profile.js";
-import EditProfilePage from "./pages/editProfile.js";
+import EditProfilePage from "./pages/editprofile.js";
 import InfoPage from "./pages/info.js";
 import CheckoutPage from "./pages/checkout.js";
 
@@ -15,8 +16,12 @@ class Router {
   constructor() {
     this.routes = [
       {
-        path: "/",
-        view: new FeedPage("feed"),
+        path: "/", // path to the view/page component
+        view: new FeedPage("feed"), // an instance of the view/page
+      },
+      {
+        path: "/intro",
+        view: new IntroPage("intro"),
       },
       {
         path: "/signup",
@@ -31,28 +36,28 @@ class Router {
         view: new PreferencesPage("preferences"),
       },
       {
-        path: "/item/:id",
+        path: "/aroundyou",
+        view: new AroundYouPage("aroundyou"),
+      },
+      {
+        path: "/item",
         view: new ItemPage("item"),
       },
       {
         path: "/additem",
-        view: new AddItemPage("addItem"),
-      },
-      {
-        path: "/category",
-        view: new CategoryPage("category"),
+        view: new AddItemPage("additem"),
       },
       {
         path: "/map",
         view: new MapPage("map"),
       },
       {
-        path: "/profile/:id",
+        path: "/profile",
         view: new ProfilePage("profile"),
       },
       {
         path: "/editprofile",
-        view: new EditProfilePage("editProfile"),
+        view: new EditProfilePage("editprofile"),
       },
       {
         path: "/info",
