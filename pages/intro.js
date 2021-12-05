@@ -17,7 +17,7 @@ export default class IntroPage {
       "beforeend",
       /*html*/ `
             <section id="${this.id}" class="page">
-              <h1>${this.id}</h1>
+              <h1 class="intro__title">${this.id}</h1>
             </section>
         `
     );

@@ -1,11 +1,12 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AICG,AAAD,aAAQ,CAAC;EACP,KAAK,EHDD,OAAO;CGEZ",
     "sources": [
         "../scss/main.scss",
-        "../scss/_navigation.scss",
-        "../scss/_buttons.scss",
-        "../scss/_variables.scss"
+        "../scss/_variables.scss",
+        "../scss/components/_navigation.scss",
+        "../scss/components/_buttons.scss",
+        "../scss/pages/_intro.scss"
     ],
     "names": [],
     "file": "main.css"
