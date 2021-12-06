@@ -214,4 +214,90 @@ a {
 .signup__login-link {
   color: #ffa17a;
 }
+
+.login {
+  background: #fefcfa;
+  height: 100vh;
+  padding: 5rem;
+}
+
+.login__logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 5rem;
+}
+
+.login__logo {
+  margin-left: -3rem;
+  width: 20rem;
+}
+
+.login__form-container {
+  padding-top: 18rem;
+}
+
+.login__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login__form input {
+  border-style: none;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
+  border-left: 0.1rem solid rgba(0, 0, 0, 0.3);
+  color: #353535;
+  width: 32rem;
+  height: 3rem;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+  font-family: "Roboto";
+  font-style: medium;
+  font-size: 1.6rem;
+}
+
+.login__form input:focus {
+  outline: 0;
+  border-bottom: 0.2rem solid #00a987;
+  border-left: 0.2rem solid #00a987;
+}
+
+.login__form input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.login__form input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.login__form input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.login__form input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.login__button {
+  margin-top: 5rem;
+}
+
+.login__signup-text {
+  text-align: center;
+}
+
+.login__signup-link {
+  color: #ffa17a;
+}
 /*# sourceMappingURL=main.css.map */
