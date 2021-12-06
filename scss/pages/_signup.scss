@@ -1,0 +1,61 @@
+.signup {
+  background: $white;
+  height: 100vh;
+  padding: 5rem;
+
+  &__logo-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+  }
+
+  &__logo {
+    margin-left: -3rem;
+    width: 16rem;
+  }
+
+  &__form-container {
+    padding-top: 8rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      border-style: none;
+      border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
+      border-left: 0.1rem solid rgba(0, 0, 0, 0.3);
+      color: $dark-grey;
+      width: 32rem;
+      height: 3rem;
+      margin-bottom: 3rem;
+      padding-left: 2rem;
+      font-family: "Roboto";
+      font-style: medium;
+      font-size: 1.6rem;
+
+      &:focus {
+        outline: 0;
+        border-bottom: 0.2rem solid $light-green;
+        border-left: 0.2rem solid $light-green;
+      }
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 5rem;
+  }
+
+  &__login-text {
+    text-align: center;
+  }
+
+  &__login-link {
+    color: $orange;
+  }
+}

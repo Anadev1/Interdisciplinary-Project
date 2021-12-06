@@ -16,7 +16,7 @@ export default class IntroPage {
   render() {
     document.querySelector("#root").insertAdjacentHTML(
       "beforeend",
-      /*html*/ `
+      /*html*/ ` 
             <section id="${this.id}" class="page intro">
               <div class="intro__logo-container">
                 <img src="../img/shareat-logo.svg" alt="logo" class="intro__logo" />
@@ -38,8 +38,7 @@ export default class IntroPage {
     );
   }
 
-  beforeShow(props) {
-    // console.log(props);
+  beforeShow() {
     nav.hide();
   }
 }
