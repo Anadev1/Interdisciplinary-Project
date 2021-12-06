@@ -1,4 +1,5 @@
 import loader from "../components/loader.js";
+import nav from "../components/nav.js";
 import router from "../router.js";
 import service from "../service.js";
 
@@ -24,6 +25,6 @@ export default class FeedPage {
   }
 
   beforeShow(props) {
-    console.log(props);
+    nav.show();
   }
 }

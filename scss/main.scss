@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
 @import "variables";
+@import "base";
 
 // COMPONENTS
-@import "components/navigation";
-@import "components/buttons";
+@import "./components/navigation";
+@import "./components/buttons";
 
 // PAGES
-@import "pages/intro";
+@import "./pages/intro";

@@ -23,6 +23,14 @@ class Nav {
         `
     );
   }
+
+  show() {
+    document.querySelector(".tabbar").classList.remove("hide");
+  }
+
+  hide() {
+    document.querySelector(".tabbar").classList.add("hide");
+  }
 }
 
 const nav = new Nav();

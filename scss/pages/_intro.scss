@@ -1,5 +1,37 @@
 .intro {
+  background: $green;
+  height: 100vh;
+  padding: 5rem;
+  text-align: center;
+
   &__title {
-    color: $green;
+    color: $white;
+  }
+
+  &__description {
+    color: $white;
+
+    span {
+      color: $orange;
+    }
+  }
+
+  &__logo-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+  }
+
+  &__logo {
+    margin-left: -3rem;
+  }
+
+  &__buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 6rem;
   }
 }
