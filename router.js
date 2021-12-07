@@ -47,10 +47,19 @@ class Router {
     window.history.pushState({}, path, this.basePath + path);
     this.showPage(path);
   }
+
   showPage(path) {
-    this.hideAllPages(); // hide all pages
-    document.querySelector(`#${this.routes[path]}`).style.display = "block"; // show page by given path
-    this.setActiveTab(path);
+    if (path == "#/login") {
+      this.hideAllPages();
+      document.querySelector(`#${this.routes[path]}`).style.display = "block"; // show page by given path
+      this.setActiveTab(path);
+      this.hideNav(true);
+    } else {
+      this.hideAllPages();
+      document.querySelector(`#${this.routes[path]}`).style.display = "block"; // show page by given path
+      this.setActiveTab(path);
+      this.hideNav(false);
+    }
   }
 
   // hide all pages
@@ -68,6 +77,14 @@ class Router {
       } else {
         link.classList.remove("active");
       }
+    }
+  }
+
+  hideNav(hide) {
+    if (hide) {
+      document.querySelector(".tabbar").style.display = "none";
+    } else {
+      document.querySelector(".tabbar").style.display = "block";
     }
   }
 }

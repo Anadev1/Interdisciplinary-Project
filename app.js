@@ -1,5 +1,6 @@
 // import nav from "./components/nav.js";
 import Router from "./router.js";
+import Nav from "./components/nav.js";
 
 import AddItemPage from "./pages/addItem.js";
 import AroundYouPage from "./pages/aroundyou.js";
@@ -15,11 +16,12 @@ import PreferencesPage from "./pages/preferences.js";
 import ProfilePage from "./pages/profile.js";
 import SignupPage from "./pages/signup.js";
 
-// nav.render();
-
 // app - dom element
 const app = document.querySelector("#app");
 const pages = document.querySelector("#pages");
+
+// nav.render();
+const nav = new Nav(app);
 
 // init pages
 const addItemPage = new AddItemPage(pages);
