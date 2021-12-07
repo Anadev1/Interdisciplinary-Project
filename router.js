@@ -11,6 +11,8 @@ class Router {
       "#/checkout": "checkout",
       "#/editprofile": "editprofile",
       "#/info": "info",
+      "#/news": "news",
+      "#/tips": "tips",
       "#/intro": "intro",
       "#/item": "item",
       "#/signup": "signup",
