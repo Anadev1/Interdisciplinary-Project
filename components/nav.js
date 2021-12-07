@@ -8,19 +8,11 @@ export default class Nav {
       "afterbegin",
       /*html*/ `
       <nav class="tabbar">
-          <a href="#/feed" class="nav-link">Feed</a>
-          <a href="#/intro" class="nav-link">Intro</a>
-          <a href="#/signup" class="nav-link">Sign Up</a>
-          <a href="#/login" class="nav-link">Login</a>
-          <a href="#/map" class="nav-link">Map</a>
-          <a href="#/preferences" class="nav-link">Preferences</a>
-          <a href="#/aroundyou" class="nav-link">Around You</a>
-          <a href="#/profile" class="nav-link">Profile</a>
-          <a href="#/item" class="nav-link">Item</a>
-          <a href="#/additem" class="nav-link">Add Item</a>
-          <a href="#/info" class="nav-link">Info</a>
-          <a href="#/editprofile" class="nav-link">Edit Profile</a>
-          <a href="#/checkout" class="nav-link">Checkout</a>
+          <a href="#/feed" class="tabbar__nav-link tabbar__nav-link--home"></a>
+          <a href="#/info" class="tabbar__nav-link tabbar__nav-link--info"></a>
+          <a href="#/additem" class="tabbar__nav-link tabbar__nav-link--add-item"></a>
+          <a href="#/map" class="tabbar__nav-link tabbar__nav-link--map"></a>
+          <a href="#/profile" class="tabbar__nav-link tabbar__nav-link--profile"></a>
       </nav>
     `
     );

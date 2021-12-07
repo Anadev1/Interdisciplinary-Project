@@ -46,6 +46,50 @@ a {
 
 .tabbar {
   display: block;
+  background: url("../../img/nav.svg") no-repeat;
+  height: 9rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.tabbar__nav-link {
+  position: absolute;
+  width: 3rem;
+  height: 2.4rem;
+}
+
+.tabbar__nav-link--home {
+  background: url("../../img/home-passive.svg") no-repeat;
+  bottom: 1.8rem;
+  left: 2.5rem;
+}
+
+.tabbar__nav-link--info {
+  background: url("../../img/info-passive.svg") no-repeat;
+  bottom: 1.8rem;
+  left: 11rem;
+}
+
+.tabbar__nav-link--add-item {
+  width: 5rem;
+  height: 5rem;
+  left: 18.1rem;
+  bottom: 2.8rem;
+  border-radius: 5rem;
+}
+
+.tabbar__nav-link--map {
+  background: url("../../img/map-passive.svg") no-repeat;
+  bottom: 1.8rem;
+  right: 11rem;
+}
+
+.tabbar__nav-link--profile {
+  background: url("../../img/profile-passive.svg") no-repeat;
+  bottom: 1.8rem;
+  right: 2.5rem;
 }
 
 .btn__large {
@@ -295,5 +339,11 @@ a {
 
 .login__signup-link {
   color: #ffa17a;
+}
+
+.feed__title-container {
+  width: 100vw;
+  height: 8rem;
+  background: #007663;
 }
 /*# sourceMappingURL=main.css.map */

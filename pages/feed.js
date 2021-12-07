@@ -14,7 +14,10 @@ export default class FeedPage {
   render() {
     this.domElement.innerHTML += /*html*/ `
             <section id="feed" class="page">
-              <h1>feed</h1>
+              <div class="feed__title-container">
+                <h2 class="feed__title">Feed</h2>
+              </div>
+              
             </section>
         `;
   }

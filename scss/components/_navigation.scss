@@ -1,3 +1,46 @@
 .tabbar {
   display: block;
+  background: url("../../img/nav.svg") no-repeat;
+  height: 9rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+
+  &__nav-link {
+    position: absolute;
+    width: 3rem;
+    height: 2.4rem;
+
+    &--home {
+      background: url("../../img/home-passive.svg") no-repeat;
+      bottom: 1.8rem;
+      left: 2.5rem;
+    }
+
+    &--info {
+      background: url("../../img/info-passive.svg") no-repeat;
+      bottom: 1.8rem;
+      left: 11rem;
+    }
+
+    &--add-item {
+      width: 5rem;
+      height: 5rem;
+      left: 18.1rem;
+      bottom: 2.8rem;
+      border-radius: 5rem;
+    }
+
+    &--map {
+      background: url("../../img/map-passive.svg") no-repeat;
+      bottom: 1.8rem;
+      right: 11rem;
+    }
+    &--profile {
+      background: url("../../img/profile-passive.svg") no-repeat;
+      bottom: 1.8rem;
+      right: 2.5rem;
+    }
+  }
 }

@@ -65,6 +65,38 @@ class Router {
       this.setActiveTab(path);
       this.hideNav(false);
     }
+
+    if (path == "#/feed") {
+      document.querySelector(".tabbar__nav-link--home").style.background =
+        'url("../../img/home-active.svg") no-repeat';
+    } else {
+      document.querySelector(".tabbar__nav-link--home").style.background =
+        'url("../../img/home-passive.svg") no-repeat';
+    }
+
+    if (path == "#/info") {
+      document.querySelector(".tabbar__nav-link--info").style.background =
+        'url("../../img/info-active.svg") no-repeat';
+    } else {
+      document.querySelector(".tabbar__nav-link--info").style.background =
+        'url("../../img/info-passive.svg") no-repeat';
+    }
+
+    if (path == "#/map") {
+      document.querySelector(".tabbar__nav-link--map").style.background =
+        'url("../../img/map-active.svg") no-repeat';
+    } else {
+      document.querySelector(".tabbar__nav-link--map").style.background =
+        'url("../../img/map-passive.svg") no-repeat';
+    }
+
+    if (path == "#/profile") {
+      document.querySelector(".tabbar__nav-link--profile").style.background =
+        'url("../../img/profile-active.svg") no-repeat';
+    } else {
+      document.querySelector(".tabbar__nav-link--profile").style.background =
+        'url("../../img/profile-passive.svg") no-repeat';
+    }
   }
 
   // hide all pages
