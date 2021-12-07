@@ -3,5 +3,42 @@
     width: 100vw;
     height: 8rem;
     background: $green;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-left: 2.5rem;
+    color: $white;
+  }
+
+  &__text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2.5rem;
+  }
+
+  &__more {
+    color: $light-green;
+  }
+
+  &__items-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 3rem;
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    margin: 0 10rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__container {
+    margin-bottom: 5rem;
   }
 }

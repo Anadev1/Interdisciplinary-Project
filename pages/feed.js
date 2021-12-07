@@ -15,10 +15,50 @@ export default class FeedPage {
     this.domElement.innerHTML += /*html*/ `
             <section id="feed" class="page">
               <div class="feed__title-container">
-                <h2 class="feed__title">Feed</h2>
+                <h2 class="feed__title">FEED</h2>
               </div>
               
-            </section>
+              <div class="feed__container">
+                <div class="feed__text-container">
+                  <h2 class="feed__container-title">Around you</h2>
+                  <p class="feed__more">More</p>
+                </div>
+                <div class="feed__items-container">
+                  <h1 class="feed__item">Item 1</h1>
+                  <h1 class="feed__item">Item 2</h1>
+                  <h1 class="feed__item">Item 3</h1>
+                  <h1 class="feed__item">Item 4</h1>
+                  <h1 class="feed__item">Item 5</h1>
+                </div>
+              </div>
+
+               <div class="feed__container">
+                <div class="feed__text-container">
+                  <h2 class="feed__container-title">Vegetarian</h2>
+                  <p class="feed__more">More</p>
+                </div>
+                <div class="feed__items-container">
+                  <h1 class="feed__item">Item 1</h1>
+                  <h1 class="feed__item">Item 2</h1>
+                  <h1 class="feed__item">Item 3</h1>
+                  <h1 class="feed__item">Item 4</h1>
+                  <h1 class="feed__item">Item 5</h1>
+                </div>
+              </div>
+
+               <div class="feed__container">
+                <div class="feed__text-container">
+                  <h2 class="feed__container-title">Gluten free</h2>
+                  <p class="feed__more">More</p>
+                </div>
+                <div class="feed__items-container">
+                  <h1 class="feed__item">Item 1</h1>
+                  <h1 class="feed__item">Item 2</h1>
+                  <h1 class="feed__item">Item 3</h1>
+                  <h1 class="feed__item">Item 4</h1>
+                  <h1 class="feed__item">Item 5</h1>
+                </div>
+              </div>
         `;
   }
 
