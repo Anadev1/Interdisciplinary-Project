@@ -26,8 +26,8 @@ export default class IntroPage {
               </div>
               <div class="intro__buttons-container">
                 <p class="intro__buttons-description">Start with signing up or login</p>
-                <a class="intro__signup-button btn__large">Sign Up</a>
-                <a class="intro__login-button btn__large btn__large--white">Login</a>
+                <a href="#/signup" class="intro__signup-button btn__large">Sign Up</a>
+                <a href="#/login" class="intro__login-button btn__large btn__large--white">Login</a>
               </div>
             </section>
         `;

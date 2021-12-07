@@ -20,9 +20,6 @@ import SignupPage from "./pages/signup.js";
 const app = document.querySelector("#app");
 const pages = document.querySelector("#pages");
 
-// nav.render();
-const nav = new Nav(app);
-
 // init pages
 const addItemPage = new AddItemPage(pages);
 const aroundYouPage = new AroundYouPage(pages);
@@ -38,5 +35,6 @@ const preferencesPage = new PreferencesPage(pages);
 const profilePage = new ProfilePage(pages);
 const signupPage = new SignupPage(pages);
 
+const nav = new Nav(app);
 // init spa service
 const router = new Router(app, "#/feed");

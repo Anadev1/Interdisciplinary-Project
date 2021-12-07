@@ -49,7 +49,12 @@ class Router {
   }
 
   showPage(path) {
-    if (path == "#/login") {
+    if (
+      path == "#/login" ||
+      path == "#/signup" ||
+      path == "#/intro" ||
+      path == "#/preferences"
+    ) {
       this.hideAllPages();
       document.querySelector(`#${this.routes[path]}`).style.display = "block"; // show page by given path
       this.setActiveTab(path);

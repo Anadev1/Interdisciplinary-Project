@@ -25,10 +25,10 @@ export default class SignupPage {
                     <input id="signup-email" type="text" name="email" placeholder="Email" required>
                     <input id="signup-password" type="password" placeholder="Password" autocomplete="new-password" required>
                     <input id="signup-password-check" type="password" placeholder="Confirm password" autocomplete="new-password" required>
-                    <a class="signup__button btn__large">Sign up</a>
+                    <a href="#/feed" class="signup__button btn__large">Sign up</a>
                   </form>
                 </div>
-                <p class="signup__login-text">Already have an account? <a href="" class="signup__login-link">Login</a></p>
+                <p class="signup__login-text">Already have an account? <a href="#/login" class="signup__login-link">Login</a></p>
             </section>
         `;
   }
