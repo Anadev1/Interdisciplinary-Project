@@ -1,37 +1,29 @@
-class Nav {
-  constructor() {}
+// class Nav {
+//   constructor() {}
 
-  render() {
-    document.querySelector("#root").insertAdjacentHTML(
-      "afterbegin",
-      /*html*/ `
-            <nav class="tabbar">
-                <a href="/" class="router-link">Feed</a>
-                <a href="/intro" class="router-link">Intro</a>
-                <a href="/signup" class="router-link">Sign Up</a>
-                <a href="/login" class="router-link">Login</a>
-                <a href="/map" class="router-link">Map</a>
-                <a href="/preferences" class="router-link">Preferences</a>
-                <a href="/aroundyou" class="router-link">Around You</a>
-                <a href="/profile" class="router-link">Profile</a>
-                <a href="/item" class="router-link">Item</a>
-                <a href="/additem" class="router-link">Add Item</a>
-                <a href="/info" class="router-link">Info</a>
-                <a href="/editprofile" class="router-link">Edit Profile</a>
-                <a href="/checkout" class="router-link">Checkout</a>
-            </nav>
-        `
-    );
-  }
+//   render() {
+//     document.querySelector("#root").insertAdjacentHTML(
+//       "afterbegin",
+//       /*html*/ `
+//             <nav class="tabbar">
+//                 <a href="#/" class="nav-link">Feed</a>
+//                 <a href="#/intro" class="nav-link">Intro</a>
+//                 <a href="#/signup" class="nav-link">Sign Up</a>
+//                 <a href="#/login" class="nav-link">Login</a>
+//                 <a href="#/map" class="nav-link">Map</a>
+//                 <a href="#/preferences" class="nav-link">Preferences</a>
+//                 <a href="#/aroundyou" class="nav-link">Around You</a>
+//                 <a href="#/profile" class="nav-link">Profile</a>
+//                 <a href="#/item" class="nav-link">Item</a>
+//                 <a href="#/additem" class="nav-link">Add Item</a>
+//                 <a href="#/info" class="nav-link">Info</a>
+//                 <a href="#/editprofile" class="nav-link">Edit Profile</a>
+//                 <a href="#/checkout" class="nav-link">Checkout</a>
+//             </nav>
+//         `
+//     );
+//   }
+// }
 
-  show() {
-    document.querySelector(".tabbar").classList.remove("hide");
-  }
-
-  hide() {
-    document.querySelector(".tabbar").classList.add("hide");
-  }
-}
-
-const nav = new Nav();
-export default nav;
+// const nav = new Nav();
+// export default nav;

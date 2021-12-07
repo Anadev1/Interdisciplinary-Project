@@ -1,11 +1,9 @@
-import loader from "../components/loader.js";
-import nav from "../components/nav.js";
-import router from "../router.js";
+// import nav from "../components/nav.js";
 import service from "../service.js";
 
 export default class IntroPage {
-  constructor(id) {
-    this.id = id;
+  constructor(domElement) {
+    this.domElement = domElement;
     this.render();
   }
 
@@ -14,10 +12,8 @@ export default class IntroPage {
    * It is using insertAdjacentHTML, which is another way of adding text as HTML to the DOM (read more here: https://www.w3schools.com/jsref/met_node_insertadjacenthtml.asp).
    */
   render() {
-    document.querySelector("#root").insertAdjacentHTML(
-      "beforeend",
-      /*html*/ ` 
-            <section id="${this.id}" class="page intro">
+    this.domElement.innerHTML += /*html*/ ` 
+            <section id="intro" class="page intro">
               <div class="intro__logo-container">
                 <img src="../img/shareat-logo.svg" alt="logo" class="intro__logo" />
               </div>
@@ -34,11 +30,6 @@ export default class IntroPage {
                 <a class="intro__login-button btn__large btn__large--white">Login</a>
               </div>
             </section>
-        `
-    );
-  }
-
-  beforeShow() {
-    nav.hide();
+        `;
   }
 }

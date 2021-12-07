@@ -1,10 +1,9 @@
-import loader from "../components/loader.js";
-import router from "../router.js";
 import service from "../service.js";
+import router from "../router.js";
 
 export default class PreferencesPage {
-  constructor(id) {
-    this.id = id;
+  constructor(domElement) {
+    this.domElement = domElement;
     this.render();
   }
 
@@ -13,14 +12,11 @@ export default class PreferencesPage {
    * It is using insertAdjacentHTML, which is another way of adding text as HTML to the DOM (read more here: https://www.w3schools.com/jsref/met_node_insertadjacenthtml.asp).
    */
   render() {
-    document.querySelector("#root").insertAdjacentHTML(
-      "beforeend",
-      /*html*/ `
-            <section id="${this.id}" class="page">
-              <h1>${this.id}</h1>
+    this.domElement.innerHTML += /*html*/ `
+            <section id="preferences" class="page">
+              <h1>preferences</h1>
             </section>
-        `
-    );
+        `;
   }
 
   beforeShow(props) {

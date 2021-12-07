@@ -1,10 +1,8 @@
-import loader from "../components/loader.js";
-import router from "../router.js";
 import service from "../service.js";
 
 export default class AddItemPage {
-  constructor(id) {
-    this.id = id;
+  constructor(domElement) {
+    this.domElement = domElement;
     this.render();
   }
 
@@ -13,17 +11,10 @@ export default class AddItemPage {
    * It is using insertAdjacentHTML, which is another way of adding text as HTML to the DOM (read more here: https://www.w3schools.com/jsref/met_node_insertadjacenthtml.asp).
    */
   render() {
-    document.querySelector("#root").insertAdjacentHTML(
-      "beforeend",
-      /*html*/ `
-            <section id="${this.id}" class="page">
-              <h1>${this.id}</h1>
+    this.domElement.innerHTML += /*html*/ `
+            <section id="additem" class="page">
+              <h1>additem</h1>
             </section>
-        `
-    );
-  }
-
-  beforeShow(props) {
-    console.log(props);
+        `;
   }
 }

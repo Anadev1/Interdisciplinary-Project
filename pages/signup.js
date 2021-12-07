@@ -1,11 +1,10 @@
-import loader from "../components/loader.js";
-import nav from "../components/nav.js";
-import router from "../router.js";
+// import nav from "../components/nav.js";
 import service from "../service.js";
+import router from "../router.js";
 
 export default class SignupPage {
-  constructor(id) {
-    this.id = id;
+  constructor(domElement) {
+    this.domElement = domElement;
     this.render();
   }
 
@@ -14,10 +13,8 @@ export default class SignupPage {
    * It is using insertAdjacentHTML, which is another way of adding text as HTML to the DOM (read more here: https://www.w3schools.com/jsref/met_node_insertadjacenthtml.asp).
    */
   render() {
-    document.querySelector("#root").insertAdjacentHTML(
-      "beforeend",
-      /*html*/ `
-            <section id="${this.id}" class="page">
+    this.domElement.innerHTML += /*html*/ `
+            <section id="signup" class="page">
                 <div class="signup__logo-container">
                   <img src="../img/shareat-logo.svg" alt="logo" class="signup__logo" />
                 </div>
@@ -33,8 +30,7 @@ export default class SignupPage {
                 </div>
                 <p class="signup__login-text">Already have an account? <a href="" class="signup__login-link">Login</a></p>
             </section>
-        `
-    );
+        `;
   }
 
   beforeShow() {
