@@ -101,3 +101,14 @@ a:link {
     margin: -300px;
   }
 }
+
+.container {
+  /* Used to position the faded element */
+  position: relative;
+}
+
+.container__content {
+  /* Height */
+  height: 823px;
+  margin: auto 25px auto 25px;
+}
