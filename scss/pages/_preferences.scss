@@ -1,0 +1,56 @@
+.preferences {
+  &__title-container {
+    width: 100vw;
+    height: 8rem;
+    background: $green;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-left: 2.5rem;
+    color: $white;
+  }
+
+  &__subtitle {
+    margin-left: 2.5rem;
+    margin-top: 3.5rem;
+  }
+
+  &__dietary-container,
+  &__allergies-container {
+    margin: 0 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    background: #fefcfa;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 1.5rem;
+    overflow-y: scroll;
+    height: 28vh;
+  }
+
+  &__dietary-preference,
+  &__allergy-preference {
+    height: 5rem;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $white;
+    color: $green;
+    border: 0.2rem solid $green;
+    margin-bottom: 1.5rem;
+    border-radius: 5rem;
+    padding: 1.2rem 2rem;
+    margin-right: 2.5rem;
+  }
+
+  &__preference-title {
+    margin-left: 1rem;
+  }
+
+  &__button {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+}

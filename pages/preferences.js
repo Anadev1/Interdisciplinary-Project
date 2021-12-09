@@ -14,7 +14,93 @@ export default class PreferencesPage {
   render() {
     this.domElement.innerHTML += /*html*/ `
             <section id="preferences" class="page">
-              <h1>preferences</h1>
+            <div class="preferences__title-container">
+                <h2 class="preferences__title">PREFERENCES</h2>
+              </div>
+
+              <h2 class="preferences__subtitle">Dietary restrictions</h2>
+                <div class="preferences__dietary-container">
+                  <div class="preferences__dietary-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Vegan</p>
+                  </div>
+                  <div class="preferences__dietary-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Gluten free</p>
+                  </div>
+                  <div class="preferences__dietary-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Vegetarian</p>
+                  </div>
+                  <div class="preferences__dietary-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Dairy free</p>
+                  </div>
+                  <div class="preferences__dietary-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Kosher</p>
+                  </div>
+                  <div class="preferences__dietary-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Diabetes</p>
+                  </div>
+                  <div class="preferences__dietary-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Low carb</p>
+                  </div>
+                  <div class="preferences__dietary-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Halal</p>
+                  </div>
+                  <div class="preferences__dietary-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Keto</p>
+                  </div>
+
+                </div>
+
+                <h2 class="preferences__subtitle">Allergies</h2>
+                <div class="preferences__allergies-container">
+                  <div class="preferences__allergy-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Vegan</p>
+                  </div>
+                  <div class="preferences__allergy-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Gluten free</p>
+                  </div>
+                  <div class="preferences__allergy-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Vegetarian</p>
+                  </div>
+                  <div class="preferences__allergy-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Dairy free</p>
+                  </div>
+                  <div class="preferences__allergy-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Kosher</p>
+                  </div>
+                  <div class="preferences__allergy-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Diabetes</p>
+                  </div>
+                  <div class="preferences__allergy-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Low carb</p>
+                  </div>
+                  <div class="preferences__allergy-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Halal</p>
+                  </div>
+                  <div class="preferences__allergy-preference">
+                    <img src="../img/plus.svg" class="preferences__plus-icon"/>
+                    <p class="preferences__preference-title">Keto</p>
+                  </div>
+                </div>
+
+                <a href="#/feed" class="btn btn__large preferences__button">Create account</a>
+
             </section>
         `;
   }
