@@ -1,0 +1,65 @@
+.profile {
+  &__title-container {
+    width: 100vw;
+    height: 8rem;
+    background: $green;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-left: 2.5rem;
+    color: $white;
+  }
+
+  &__info-container {
+    margin: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__edit-button {
+    color: $orange;
+  }
+
+  &__text-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image {
+    width: 17rem;
+  }
+
+  &__preferences-container {
+    margin: 0 2.5rem;
+  }
+
+  &__preferences-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__preference {
+    width: fit-content;
+    padding: 1.2rem 2rem;
+    background: $green;
+    color: $white;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    margin-right: 1.5rem;
+  }
+
+  &__posts-title {
+    margin: 0 2.5rem;
+  }
+
+  &__posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
