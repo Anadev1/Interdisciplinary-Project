@@ -1,0 +1,41 @@
+.aroundyou {
+  &__title-container {
+    width: 100vw;
+    height: 8rem;
+    background: $green;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-left: 2.5rem;
+    color: $white;
+  }
+  &__items-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item-container {
+    width: 50%;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  &__item-details {
+    text-align: center;
+    margin: 0;
+  }
+
+  &__item-expiration {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    background: $white;
+    font-size: 1.6rem;
+    font-style: normal;
+    color: $light-green;
+  }
+}

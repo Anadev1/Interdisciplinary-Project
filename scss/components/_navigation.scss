@@ -1,11 +1,13 @@
 .tabbar {
   display: block;
   background: url("../../img/nav.svg") no-repeat;
+  background-position: center;
   height: 9rem;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100vw;
+  z-index: 99999;
 
   &__nav-link {
     position: absolute;
