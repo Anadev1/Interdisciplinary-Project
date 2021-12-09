@@ -13,12 +13,12 @@ export default class MapPage {
   render() {
     this.domElement.innerHTML += /*html*/ `
             <section id="map" class="page">
-              <h1>map</h1>
+              <div id="google-map" class="map__container"></div>
             </section>
         `;
   }
 
-  beforeShow(props) {
-    console.log(props);
+  beforeShow() {
+    service.initMap();
   }
 }

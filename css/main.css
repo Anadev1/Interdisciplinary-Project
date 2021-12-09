@@ -1215,4 +1215,99 @@ a:link {
   margin: 0 auto;
   margin-top: 3rem;
 }
+
+.checkout__title-container {
+  width: 100vw;
+  height: 8rem;
+  background: #007663;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkout__title {
+  margin-left: 2.5rem;
+  color: #fefcfa;
+}
+
+.checkout__logo-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.checkout__logo {
+  width: 10rem;
+  margin: 3rem 0;
+  margin-left: -2rem;
+}
+
+.checkout__text-container {
+  margin: 0 2.5rem;
+  text-align: center;
+}
+
+.checkout__text-subtitle {
+  margin-top: 3rem;
+}
+
+.checkout__payment-container {
+  margin: 4rem 2.5rem 9rem 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.checkout__payment-method {
+  background: #fefcfa;
+  -webkit-filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)) drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25)) drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.25));
+  border-radius: 0.5rem;
+  width: 14rem;
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.checkout__payment-logo {
+  width: 20rem;
+}
+
+.checkout__button-container {
+  width: 100%;
+}
+
+.checkout__return-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffa17a;
+}
+
+.map__container {
+  width: 100vw;
+  height: 91vh;
+}
 /*# sourceMappingURL=main.css.map */

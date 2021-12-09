@@ -108,6 +108,14 @@ class Service {
     this.users = result;
     return this.users;
   }
+
+  async initMap() {
+    // The map, centered at Uluru
+    new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+      center: uluru,
+    });
+  }
 }
 
 const service = new Service();
