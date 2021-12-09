@@ -754,4 +754,12 @@ a:link {
   font-style: normal;
   color: #00a987;
 }
+
+.item__image-container {
+  width: 100vw;
+}
+
+.item__image {
+  width: 100%;
+}
 /*# sourceMappingURL=main.css.map */
