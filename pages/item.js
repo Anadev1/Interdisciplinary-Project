@@ -22,15 +22,20 @@ export default class ItemPage {
                   <h2 class="item__title">Egg carton</h2>
                   <p class="item__posted-time">Posted 2 hours ago by <span>Alex K.</span></p>
                 </div>
-                <p class="item__price">10 DKK</p>
+                <div class="item__price-container">
+                  <h2 class="item__price">10</h2>
+                  <h2>DKK</h2>
+                </div>
+                
               </div>
               <div class="item__container">
-                  <a class="btn btn__large">BUY</a>
+                  <a class="btn btn__large item__button">BUY</a>
+                  <div class="item__map"></div>
+                <h2 class="item__description-title">Description</h2>
+                <p class="item__description">This egg carton has eggs in it and it is amazing.<br>
+                  You can make an omlette or you can use it in a cake. Up to you. </p>
               </div>
-              <div class="item__map"></div>
-              <h2 class="item__description-title">Description</h2>
-              <p class="item__description">This egg carton has eggs in it and it’s amazing.<br>
-                You can make an omlette or you can use it in a cake. Up to you. </p>
+              
             </section>
         `;
   }
