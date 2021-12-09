@@ -13,11 +13,11 @@ export default class NewsPage {
   render() {
     this.domElement.innerHTML += /*html*/ `
             <section id="news" class="page">
-              <h1>news</h1>
+              <!--<h1>news</h1>-->
               <ul class="news__topBar">
-                <li data-num="1" class="tab wave dark" onclick="waveBtn()"><a href="#/news" checked>NEWS</a></li>
-                <li data-num="2" class="tab wave dark" onclick="waveBtn()"><a href="#/tips">TIPS</a></li>
                 <li data-num="3" class="tab wave dark" onclick="waveBtn()"><a href="#/info">INFO</a></li>
+                <li data-num="2" class="tab wave dark" onclick="waveBtn()"><a href="#/tips">TIPS</a></li>
+                <li data-num="1" class="tab wave dark" onclick="waveBtn()"><a href="#/news">NEWS</a></li>
                 <div class="indicator"></div>
               </ul>
             </section>

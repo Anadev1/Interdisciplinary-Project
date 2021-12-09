@@ -13,13 +13,26 @@ export default class InfoPage {
   render() {
     this.domElement.innerHTML += /*html*/ `
             <section id="info" class="page">
-              <h1>info</h1>
+            <!--<h1>info</h1>-->
               <ul class="info__topBar">
-                <li data-num="1" class="tab wave dark" onclick="waveBtn()"><a href="#/news">NEWS</a></li>
+                <li data-num="3" class="tab wave dark" onclick="waveBtn()"><a href="#/info">INFO</a></li>
                 <li data-num="2" class="tab wave dark" onclick="waveBtn()"><a href="#/tips">TIPS</a></li>
-                <li data-num="3" class="tab wave dark" onclick="waveBtn()"><a href="#/info" checked>INFO</a></li>
+                <li data-num="1" class="tab wave dark" onclick="waveBtn()"><a href="#/news">NEWS</a></li>
                 <div class="indicator"></div>
               </ul>
+
+
+              <div class="container">
+                <div class="container__content">
+                  <article>
+                  <h1>Food waste</h1>
+                  <p>Would you go into a supermarket, buy three shopping bags of food, and then immediately throw one away? Statistically, that’s what’s happening to our food today. One third of all the food that is produced for human consumption is wasted. When we waste food, we waste all the resources that go into producing and transporting the food, such as land, water and fuel use, without gaining any of the benefits of feeding people. When food ends up in landfill it also contributes to greenhouse gas emissions. Food waste remains a problem in Europe and around the world.</p>
+                  <h2>What is the difference between food waste and food loss?</h2>
+                  <p>In order to tackle food waste, understanding the problem is key to finding good solutions. A first step is to measure the amount of food that goes to waste and to understand where along the supply chain the waste is happening. Depending on where it happens along the supply chain, we use the terms food loss or food waste.</p>
+                  </article>
+                </div>
+              </div>
+
             </section>
       `;
   }
