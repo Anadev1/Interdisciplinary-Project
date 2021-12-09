@@ -1,30 +1,40 @@
-.additem {
+.editprofile {
   &__title-container {
     width: 100vw;
     height: 8rem;
     background: $green;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+  }
+
+  &__save-button {
+    margin-top: 1rem;
   }
 
   &__title {
-    margin-left: 2.5rem;
     color: $white;
   }
 
-  &__form-container {
-    margin: 0 2.5rem;
+  &__image {
+    margin-bottom: 3rem;
+  }
+
+  &__info-container {
+    margin: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__form {
-    input[type="text"],
-    input[type="textarea"] {
+    input[type="text"] {
+      margin-bottom: 2rem;
       border-style: none;
       color: $dark-grey;
       width: 100%;
       height: 5rem;
-      margin-bottom: 2.5rem;
-      margin-top: 4.5rem;
       padding-left: 2rem;
       font-family: "Roboto";
       font-style: medium;
@@ -42,26 +52,11 @@
         color: rgba(0, 0, 0, 0.5);
       }
     }
-
-    input[type="textarea"] {
-      margin-bottom: 2.5rem;
-      margin-top: 0;
-      height: 15rem;
-    }
-
-    input[type="file"] {
-      border-style: none;
-    }
   }
 
-  &__allergens-container {
+  &__preferences-container {
     margin: 0 2.5rem;
   }
-
-  &__allergens-title {
-    margin-top: 3rem;
-  }
-
   &__search-container {
     input[type="search"] {
       border-style: none;
