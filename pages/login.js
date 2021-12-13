@@ -21,7 +21,7 @@ export default class LoginPage {
                   <form class="login__form">
                     <input id="login-email" type="email" placeholder="Email" required>
                     <input id="login-password" type="password" placeholder="Password" required>
-                    <a href="#/feed" id="btn-login" class="login__button btn__large">Login</a>
+                    <button id="btn-login" class="login__button btn__large">Login</button>
                   </form>
                 </div>
                 <p class="login__signup-text">Don't have an account? <a href="#/signup" class="login__signup-link">Sign up</a></p>

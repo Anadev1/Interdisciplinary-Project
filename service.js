@@ -3,38 +3,6 @@ import Router from "./router.js";
 class Service {
   constructor() {}
 
-  async signup() {
-    const firstname = document.querySelector("#signup-firstname").value;
-    const lastname = document.querySelector("#signup-lastname").value;
-    const email = document.querySelector("#signup-email").value;
-    const password = document.querySelector("#signup-password").value;
-    const passwordCheck = document.querySelector(
-      "#signup-password-check"
-    ).value;
-
-    const user = {
-      firstname,
-      lastname,
-      email,
-      password,
-      passwordCheck,
-    };
-    console.log(user);
-
-    const response = await fetch("http://localhost:3000/?action=signup", {
-      method: "POST",
-      body: JSON.stringify(user),
-    });
-
-    const data = await response.json();
-    console.log(data);
-    if (data.signupSuccess) {
-      Router.navigateTo("#/feed");
-    } else {
-      document.querySelector(".signup-message").innerHTML = data.error;
-    }
-  }
-
   // async uploadImage(imageFile) {
   //   let formData = new FormData();
   //   formData.append("fileToUpload", imageFile);

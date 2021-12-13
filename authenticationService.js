@@ -15,11 +15,12 @@ async function login() {
   if (data.authenticated) {
     localStorage.setItem("userIsAuthenticated", true);
     localStorage.setItem("authUser", JSON.stringify(data.userData));
-    resetMessage();
+    // resetMessage();
     navigateTo("#/");
-  } else {
-    document.querySelector(".login-message").innerHTML = data.error;
   }
+  // else {
+  //   document.querySelector(".login-message").innerHTML = data.error;
+  // }
 }
 
 // function logout() {
@@ -54,17 +55,18 @@ async function signup() {
   const data = await response.json();
   console.log(data);
   if (data.signupSuccess) {
-    resetMessage();
+    // resetMessage();
     navigateTo("#/login");
-  } else {
-    document.querySelector(".signup-message").innerHTML = data.error;
   }
+  // else {
+  //   document.querySelector(".signup-message").innerHTML = data.error;
+  // }
 }
 
-function resetMessage() {
-  document.querySelector(".signup-message").innerHTML = "";
-  document.querySelector(".login-message").innerHTML = "";
-}
+// function resetMessage() {
+//   document.querySelector(".signup-message").innerHTML = "";
+//   document.querySelector(".login-message").innerHTML = "";
+// }
 
 // event listeners
 document.querySelector("#btn-login").onclick = () => login();

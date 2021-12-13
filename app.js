@@ -42,3 +42,34 @@ const signupPage = new SignupPage(pages);
 const nav = new Nav(app);
 // init spa service
 const router = new Router(app, "#/feed");
+
+async function signup() {
+  let firstname = document.querySelector("#signup-firstname").value;
+  let lastname = document.querySelector("#signup-lastname").value;
+  let email = document.querySelector("#signup-email").value;
+  let password = document.querySelector("#signup-password").value;
+
+  const user = {
+    firstname,
+    lastname,
+    email,
+    password,
+  };
+  console.log(user);
+
+  const response = await fetch(
+    "http://localhost:3000//backend/backend.php?action=signup",
+    {
+      method: "POST",
+      body: JSON.stringify(user),
+    }
+  );
+
+  const data = await response.json();
+  console.log(data);
+  if (data.signup) {
+    Router.navigateTo("#/feed");
+  }
+}
+
+document.querySelector("#btn-signup").onclick = () => signup();

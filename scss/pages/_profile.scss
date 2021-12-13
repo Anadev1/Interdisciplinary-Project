@@ -5,10 +5,11 @@
     background: $green;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
   }
 
   &__title {
-    margin-left: 2.5rem;
     color: $white;
   }
 
