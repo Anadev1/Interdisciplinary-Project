@@ -43,6 +43,7 @@ const nav = new Nav(app);
 // init spa service
 const router = new Router(app, "#/feed");
 
+// SIGNUP SERVICE
 async function signup() {
   let firstname = document.querySelector("#signup-firstname").value;
   let lastname = document.querySelector("#signup-lastname").value;
@@ -68,8 +69,42 @@ async function signup() {
   const data = await response.json();
   console.log(data);
   if (data.signup) {
-    Router.navigateTo("#/feed");
+    navigateTo("#/login");
   }
 }
 
 document.querySelector("#btn-signup").onclick = () => signup();
+
+// LOGIN SERVICE
+async function login() {
+  const email = document.querySelector("#login-email").value;
+  const password = document.querySelector("#login-password").value;
+  const loginObject = { email: email, password: password };
+  console.log(loginObject);
+  const response = await fetch(
+    "http://localhost:3000//backend/backend.php?action=login",
+    {
+      method: "POST",
+      body: JSON.stringify(loginObject),
+    }
+  );
+
+  const data = await response.json();
+  console.log(data);
+  if (data.authenticated) {
+    localStorage.setItem("userIsAuthenticated", true);
+    localStorage.setItem("authUser", JSON.stringify(data.userData));
+    Router.navigateTo("#/feed");
+  }
+}
+document.querySelector("#btn-login").onclick = () => login();
+
+// LOGOUT SERVICE
+function logout() {
+  //reset localStorage
+  localStorage.removeItem("userIsAuthenticated");
+  localStorage.removeItem("authUser");
+  //navigate to login
+  Router.navigateTo("#/login");
+}
+document.querySelector("#btn-logout").onclick = () => logout();

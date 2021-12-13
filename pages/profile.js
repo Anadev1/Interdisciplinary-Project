@@ -16,7 +16,7 @@ export default class ProfilePage {
             <section id="profile" class="page">
               <div class="profile__title-container">
                 <h2 class="profile__title">PROFILE</h2>
-                <button class="btn btn__small editprofile__save-button">LOG OUT</button>
+                <button id="btn-logout" class="btn btn__small editprofile__save-button">LOG OUT</button>
               </div>
               <div class="profile__info-container">
                 <img src="../img/profile.png" class="profile__image"/>
