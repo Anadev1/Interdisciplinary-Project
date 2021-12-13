@@ -25,7 +25,7 @@ export default class SignupPage {
                     <input id="signup-email" type="text" name="email" placeholder="Email" required>
                     <input id="signup-password" type="password" placeholder="Password" autocomplete="new-password" required>
                     <input id="signup-password-check" type="password" placeholder="Confirm password" autocomplete="new-password" required>
-                    <a href="#/feed" class="signup__button btn__large">Next</a>
+                    <button onclick="${service.signup()}" class="signup__button btn__large">Next</button>
                   </form>
                 </div>
                 <p class="signup__login-text">Already have an account? <a href="#/login" class="signup__login-link">Login</a></p>

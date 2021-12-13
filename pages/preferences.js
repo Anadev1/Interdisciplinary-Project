@@ -99,7 +99,7 @@ export default class PreferencesPage {
                   </div>
                 </div>
 
-                <a href="#/feed" class="btn btn__large preferences__button">Create account</a>
+                <a href="#/feed" id="btn-signup" class="btn btn__large preferences__button">Create account</a>
 
             </section>
         `;

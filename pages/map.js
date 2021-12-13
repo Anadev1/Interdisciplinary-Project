@@ -13,7 +13,7 @@ export default class MapPage {
   render() {
     this.domElement.innerHTML += /*html*/ `
             <section id="map" class="page">
-              <div id="google-map" class="map__container"></div>
+              <div id="map-container" class="map__container"></div>
             </section>
         `;
   }

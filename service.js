@@ -1,121 +1,63 @@
+import Router from "./router.js";
+
 class Service {
-  constructor() {
-    this.users = [];
-    this.baseUrl = "https://web-frontend.cederdorff.com/user-service/";
-    this.selectedUserId;
-  }
+  constructor() {}
 
-  /**
-   * fetch and return all users from backend service
-   */
-  async getUsers() {
-    const url = `${this.baseUrl}?action=getUsers`;
-    const response = await fetch(url);
-    const data = await response.json();
-    this.users = data;
-    return this.users;
-  }
+  async signup() {
+    const firstname = document.querySelector("#signup-firstname").value;
+    const lastname = document.querySelector("#signup-lastname").value;
+    const email = document.querySelector("#signup-email").value;
+    const password = document.querySelector("#signup-password").value;
+    const passwordCheck = document.querySelector(
+      "#signup-password-check"
+    ).value;
 
-  /**
-   * fetch and return all matches based
-   */
-  async getMatches(userId) {
-    const url = `${this.baseUrl}?action=getMatches&userId=${userId}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
-  }
-
-  async getUser(userId) {
-    const url = `${this.baseUrl}?action=getUser&userId=${userId}`;
-    const response = await fetch(url);
-    const user = await response.json();
-    return user;
-  }
-
-  async uploadImage(imageFile) {
-    let formData = new FormData();
-    formData.append("fileToUpload", imageFile);
-
-    const response = await fetch(`${this.baseUrl}?action=uploadImage`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: formData,
-    });
-    // waiting for the result
-    const result = await response.json();
-    return result;
-  }
-
-  async deleteUser(userId) {
-    const response = await fetch(
-      `${this.baseUrl}?action=deleteUser&userId=${userId}`,
-      {
-        method: "DELETE",
-      }
-    );
-    // waiting for the result
-    const result = await response.json();
-    // the result is the new updated users array
-    this.users = result;
-    return this.users;
-  }
-
-  async createUser(name, age, gender, lookingFor, image) {
-    const id = Date.now(); // dummy generated user id
-    const newUser = {
-      // declaring a new js object with the form values
-      id,
-      name,
-      age,
-      gender,
-      lookingFor,
-      image,
+    const user = {
+      firstname,
+      lastname,
+      email,
+      password,
+      passwordCheck,
     };
+    console.log(user);
 
-    // post new user to php userService using fetch(...)
-    const response = await fetch(this.baseUrl + "?action=createUser", {
+    const response = await fetch("http://localhost:3000/?action=signup", {
       method: "POST",
-      body: JSON.stringify(newUser), // parsing js object to json object
+      body: JSON.stringify(user),
     });
-    // waiting for the result
-    const result = await response.json();
-    // the result is the new updated users array
-    this.users = result;
-    return this.users;
+
+    const data = await response.json();
+    console.log(data);
+    if (data.signupSuccess) {
+      Router.navigateTo("#/feed");
+    } else {
+      document.querySelector(".signup-message").innerHTML = data.error;
+    }
   }
 
-  async updateUser(id, name, age, gender, lookingFor, image) {
-    const userToUpdate = {
-      // declaring a new js object with the form values
-      id,
-      name,
-      age,
-      gender,
-      lookingFor,
-      image,
-    };
-    // put user to php userService using fetch(...)
-    const response = await fetch(this.baseUrl + "?action=updateUser", {
-      method: "PUT",
-      body: JSON.stringify(userToUpdate), // parsing js object to json object
-    });
-    // waiting for the result
-    const result = await response.json();
-    // the result is the new updated users array
-    this.users = result;
-    return this.users;
-  }
+  // async uploadImage(imageFile) {
+  //   let formData = new FormData();
+  //   formData.append("fileToUpload", imageFile);
 
-  async initMap() {
-    // The map, centered at Uluru
-    new google.maps.Map(document.getElementById("map"), {
-      zoom: 4,
-      center: uluru,
-    });
-  }
+  //   const response = await fetch(`${this.baseUrl}?action=uploadImage`, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/x-www-form-urlencoded",
+  //     },
+  //     body: formData,
+  //   });
+  //   // waiting for the result
+  //   const result = await response.json();
+  //   return result;
+  // }
+
+  // async initMap() {
+  //   // The map, centered at Uluru
+  //   new google.maps.Map(document.getElementById("map"), {
+  //     zoom: 4,
+  //     center: uluru,
+  //   });
+  // }
 }
 
 const service = new Service();
