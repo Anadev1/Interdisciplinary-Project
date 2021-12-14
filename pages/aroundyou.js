@@ -20,7 +20,7 @@ export default class AroundYouPage {
               <h2 class="aroundyou__subtitle">Around you</h2>
               
               <div class="aroundyou__items-container">
-                <div class="aroundyou__item-container">
+               <!-- <div class="aroundyou__item-container">
                   <img src="../img/eggs.png" alt="item" class="aroundyou__item-image" />
                   <p class="aroundyou__item-details">kr. 10 - Egg carton</p>
                   <span class="aroundyou__item-expiration">EXP: 2 days</span>
@@ -54,7 +54,7 @@ export default class AroundYouPage {
                   <img src="../img/avocado.png" alt="item" class="aroundyou__item-image" />
                   <p class="aroundyou__item-details">kr. 5 - Avocado</p>
                   <span class="aroundyou__item-expiration">EXP: ???</span>
-                </div>
+                </div>-->
               </div>
 
             </section>

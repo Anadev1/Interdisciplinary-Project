@@ -154,6 +154,18 @@ async function getItems() {
 
   const data = await response.json();
   console.log(data);
+
+  let template = "";
+  for (let item of data) {
+    template += /*html*/ `
+      <div class="aroundyou__item-container">
+        <img src="../img/eggs.png" alt="item" class="aroundyou__item-image" />
+        <p class="aroundyou__item-details">kr. ${item.ItemPrice} - ${item.ItemName}</p>
+      </div>
+    `;
+  }
+
+  document.querySelector(".aroundyou__items-container").innerHTML = template;
 }
 
 getItems();
