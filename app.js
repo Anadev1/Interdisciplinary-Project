@@ -108,3 +108,32 @@ function logout() {
   Router.navigateTo("#/login");
 }
 document.querySelector("#btn-logout").onclick = () => logout();
+
+// ADDITEM SERVICE
+async function addItem() {
+  let itemName = document.querySelector("#item-name").value;
+  let itemDescription = document.querySelector("#item-description").value;
+  let itemPrice = document.querySelector("#item-price").value;
+
+  const item = {
+    itemName,
+    itemDescription,
+    itemPrice,
+  };
+  console.log(item);
+
+  const response = await fetch(
+    "http://localhost:3000//backend/backend.php?action=additem",
+    {
+      method: "POST",
+      body: JSON.stringify(item),
+    }
+  );
+
+  const data = await response.json();
+  console.log(data);
+  if (data.additem) {
+    navigateTo("#/feed");
+  }
+}
+document.querySelector("#btn-add-item").onclick = () => addItem();

@@ -37,6 +37,7 @@ if (isset($_GET['action'])) {
         // Check if the username exists
         if ($result->num_rows == 1) {
             $data = $result->fetch_object();
+
             // Check if it is the right password for that username
             if (password_verify($password, $data->PSWD)) {
                 $sql = "SELECT * FROM users WHERE id = " . $data->id;
@@ -66,7 +67,7 @@ if (isset($_GET['action'])) {
         $password = $user->password;
 
         if (!empty($email && $password && $firstname && $lastname)) {
-                $passEncrypt = password_hash($loginObject->password, PASSWORD_DEFAULT);
+                $passEncrypt = password_hash($password, PASSWORD_DEFAULT);
                 $sql = "CALL CreateUser('$firstname', '$lastname', '$email', '$passEncrypt')";
                 if ($mySQL->query($sql) === TRUE) {
                     $response['signup'] = TRUE;
@@ -81,6 +82,45 @@ if (isset($_GET['action'])) {
         } else {
             $response['signup'] = FALSE;
             $response['error'] = "Signup failed. Please fill out all fields.";
+            echo json_encode($response);
+        }
+    }
+
+    /*
+    if(action == getuserdata) {
+        Call DB for userDAta
+        Create PHP array with uerData
+        json_enconde(php array);
+        echo the json
+
+        $data = $result->fetch_assoc();
+        echo json_encode($data);
+    }
+    */
+
+     // ADD ITEM
+    if ($action == "additem") {
+        $item = json_decode(file_get_contents('php://input'));
+        // var_dump($item);
+        $itemName = $item->itemName;
+        $itemDescription = $item->itemDescription;
+        $itemPrice = $item->itemPrice;
+
+        if (!empty($itemName && $itemDescription && $itemPrice)) {
+                $sql = "CALL AddItem('$itemName', '$itemDescription', '$itemPrice')";
+                if ($mySQL->query($sql) === TRUE) {
+                    $response['additem'] = TRUE;
+                    echo json_encode($response);
+                } else {
+                    $response['additem'] = FALSE;
+                    $response['error'] = "Adding the item failed. Please try again.";
+                    echo json_encode($response);
+                }
+                
+            
+        } else {
+            $response['additem'] = FALSE;
+            $response['error'] = "Adding the item failed. Please fill out all fields.";
             echo json_encode($response);
         }
     }

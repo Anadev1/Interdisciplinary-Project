@@ -19,18 +19,22 @@ export default class AddItemPage {
 
               <div class="additem__form-container">
                <form class="additem__form">
-                <input type="text" name="name" id="name" placeholder="Item Name" /><br>
-                <input type="textarea" name="description" id="description" placeholder="Item Description" /><Br>
+                <input id="item-name" type="text" name="name" id="name" placeholder="Item Name" /><br>
+                <textarea id="item-description" rows="15" name="description" id="description" placeholder="Item Description"></textarea><Br>
+                <input id="item-price" type="text" name="price" id="price" placeholder="Item Price" /><br>
                 <input type="file" name="images" id="images" accept="image/png, image/jpg" />
+
+                <div class="additem__allergens-container">
+                <h2 class="additem__allergens-title">Allergens/Dietary restrictions</h2>
+                  <div class="additem__search-container">
+                    <input type="search" name="search" id="search" placeholder="Search..." />
+                  </div>
+                </div>
+                <button type="button" id="btn-add-item" class="btn btn__large additem__button">Add Item</button>
                </form>
               </div>
 
-              <div class="additem__allergens-container">
-                <h2 class="additem__allergens-title">Allergens/Dietary restrictions</h2>
-                <div class="additem__search-container">
-                  <input type="search" name="search" id="search" placeholder="Search..." />
-                </div>
-              </div>
+              
             </section>
         `;
   }
