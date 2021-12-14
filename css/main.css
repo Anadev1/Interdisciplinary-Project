@@ -796,6 +796,10 @@ a:link {
   color: #00a987;
 }
 
+.aroundyou__subtitle {
+  margin-left: 2.5rem;
+}
+
 .item__image-container {
   width: 100vw;
 }
