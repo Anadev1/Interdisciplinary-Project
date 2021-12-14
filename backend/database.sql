@@ -19,3 +19,25 @@ BEGIN
         VALUES (@userID, usernameVar, passwordVar);
     COMMIT;
 END;
+
+
+
+DROP PROCEDURE IF EXISTS AddItem;
+
+CREATE PROCEDURE `AddItem` (
+    IN ItemNameVar VARCHAR(50),
+    IN ItemDescriptionVar TEXT
+) 
+BEGIN 
+    START TRANSACTION;
+        INSERT INTO Items (ItemName, ItemDescription, UserID, DietaryID, AllergyID)
+        VALUES (ItemNameVar, ItemDescriptionVar, @UserID, @DietaryID, @AllergyID);
+
+        SET @UserID := (SELECT id FROM users ORDER BY id DESC LIMIT 1);
+
+        SET @DietaryID := (SELECT id FROM DietaryRestrictions ORDER BY id DESC LIMIT 1);
+
+        SET @AllergyID := (SELECT id FROM Allergies ORDER BY id DESC LIMIT 1);
+    COMMIT;
+END;
+
