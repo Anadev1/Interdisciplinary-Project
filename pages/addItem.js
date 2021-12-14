@@ -54,7 +54,7 @@ export default class AddItemPage {
     console.log(item);
 
     const response = await fetch(
-      "http://localhost:3000//backend/backend.php?action=additem",
+      "http://shareat.alexkrugeri.com//backend/backend.php?action=additem",
       {
         method: "POST",
         body: JSON.stringify(item),

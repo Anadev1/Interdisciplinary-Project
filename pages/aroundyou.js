@@ -72,7 +72,7 @@ export default class AroundYouPage {
     const items = [];
 
     const response = await fetch(
-      "http://localhost:3000//backend/backend.php?action=getitems",
+      "http://shareat.alexkrugeri.com//backend/backend.php?action=getitems",
       {
         method: "POST",
         body: JSON.stringify(items),

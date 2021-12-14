@@ -40,7 +40,7 @@ export default class LoginPage {
     const loginObject = { email: email, password: password };
     console.log(loginObject);
     const response = await fetch(
-      "http://localhost:3000//backend/backend.php?action=login",
+      "http://shareat.alexkrugeri.com//backend/backend.php?action=login",
       {
         method: "POST",
         body: JSON.stringify(loginObject),

@@ -52,7 +52,7 @@ export default class SignupPage {
     console.log(user);
 
     const response = await fetch(
-      "http://localhost:3000//backend/backend.php?action=signup",
+      "http://shareat.alexkrugeri.com//backend/backend.php?action=signup",
       {
         method: "POST",
         body: JSON.stringify(user),
