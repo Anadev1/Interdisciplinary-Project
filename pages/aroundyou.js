@@ -5,6 +5,8 @@ export default class AroundYouPage {
     this.domElement = domElement;
     this.render();
     this.getItems();
+    this.itemToShow;
+    let _data = [];
   }
 
   /**
@@ -77,13 +79,13 @@ export default class AroundYouPage {
       }
     );
 
-    const data = await response.json();
-    console.log(data);
+    this._data = await response.json();
+    console.log(this._data);
 
     let template = "";
-    for (let item of data) {
+    for (let item of this._data) {
       template += /*html*/ `
-      <div class="aroundyou__item-container">
+      <div class="aroundyou__item-container" onclick="selectItem('${item.id}')">
         <img src="../img/eggs.png" alt="item" class="aroundyou__item-image" />
         <p class="aroundyou__item-details">kr. ${item.ItemPrice} - ${item.ItemName}</p>
       </div>
@@ -91,5 +93,25 @@ export default class AroundYouPage {
     }
 
     document.querySelector(".aroundyou__items-container").innerHTML = template;
+  }
+
+  singleItem(id) {
+    this.itemToShow = this._data.find((item) => item.id === id);
+    document.querySelector(".item__info-container").innerHTML = /*html*/ `
+    <div class="item__description-container">
+      <h2 class="item__title">${this.itemToShow.ItemName}</h2>
+      <p class="item__posted-time">Posted 2 hours ago by <span>Alex K.</span></p>
+    </div>
+    <div class="item__price-container">
+      <h2 class="item__price">${this.itemToShow.ItemPrice}</h2>
+      <h2>DKK</h2>
+    </div>
+    <div class="item__container">
+        <a class="btn btn__large item__button">BUY</a>
+        <div class="item__map"></div>
+        <h2 class="item__description-title">Description</h2>
+        <p class="item__description">${this.itemToShow.ItemDescription} </p>
+    </div>
+  `;
   }
 }

@@ -47,3 +47,8 @@ document.querySelector("#btn-signup").onclick = () => signupPage.signup();
 document.querySelector("#btn-login").onclick = () => loginPage.login();
 document.querySelector("#btn-logout").onclick = () => profilePage.logout();
 document.querySelector("#btn-add-item").onclick = () => addItemPage.addItem();
+
+window.selectItem = (id) => {
+  aroundYouPage.singleItem(id);
+  Router.navigateTo("#/item");
+};
