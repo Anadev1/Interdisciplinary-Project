@@ -114,11 +114,13 @@ async function addItem() {
   let itemName = document.querySelector("#item-name").value;
   let itemDescription = document.querySelector("#item-description").value;
   let itemPrice = document.querySelector("#item-price").value;
+  let itemImage = document.querySelector("#item-image").value;
 
   const item = {
     itemName,
     itemDescription,
     itemPrice,
+    itemImage,
   };
   console.log(item);
 
@@ -130,10 +132,28 @@ async function addItem() {
     }
   );
 
-  const data = await response.json();
+  const data = await response.text();
   console.log(data);
   if (data.additem) {
     navigateTo("#/feed");
   }
 }
 document.querySelector("#btn-add-item").onclick = () => addItem();
+
+// GET ITEMS SERVICE
+async function getItems() {
+  const items = [];
+
+  const response = await fetch(
+    "http://localhost:3000//backend/backend.php?action=getitems",
+    {
+      method: "POST",
+      body: JSON.stringify(items),
+    }
+  );
+
+  const data = await response.json();
+  console.log(data);
+}
+
+getItems();

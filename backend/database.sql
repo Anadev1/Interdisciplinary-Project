@@ -27,18 +27,13 @@ DROP PROCEDURE IF EXISTS AddItem;
 CREATE PROCEDURE `AddItem` (
     IN ItemNameVar VARCHAR(50),
     IN ItemDescriptionVar TEXT,
-    IN ItemPriceVar INT
+    IN ItemPriceVar INT,
+    IN ItemImageVar VARCHAR(1000)
 ) 
 BEGIN 
     START TRANSACTION;
-        INSERT INTO Items (ItemName, ItemDescription, ItemPrice)
-        VALUES (ItemNameVar, ItemDescriptionVar, ItemPriceVar);
-
-        SET @UserID := (SELECT id FROM users ORDER BY id DESC LIMIT 1);
-
-        SET @DietaryID := (SELECT id FROM DietaryRestrictions ORDER BY id DESC LIMIT 1);
-
-        SET @AllergyID := (SELECT id FROM Allergies ORDER BY id DESC LIMIT 1);
+        INSERT INTO Items (ItemName, ItemDescription, ItemPrice, ItemImage)
+        VALUES (ItemNameVar, ItemDescriptionVar, ItemPriceVar, ItemImageVar);
 
     COMMIT;
 END;

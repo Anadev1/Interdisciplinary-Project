@@ -18,11 +18,11 @@ export default class AddItemPage {
               </div>
 
               <div class="additem__form-container">
-               <form class="additem__form">
+               <form class="additem__form" enctype="multipart/form-data">
                 <input id="item-name" type="text" name="name" id="name" placeholder="Item Name" /><br>
                 <textarea id="item-description" rows="15" name="description" id="description" placeholder="Item Description"></textarea><Br>
                 <input id="item-price" type="text" name="price" id="price" placeholder="Item Price" /><br>
-                <input type="file" name="images" id="images" accept="image/png, image/jpg" />
+                <input id="item-image" type="file" name="fileToUpload" />
 
                 <div class="additem__allergens-container">
                 <h2 class="additem__allergens-title">Allergens/Dietary restrictions</h2>
