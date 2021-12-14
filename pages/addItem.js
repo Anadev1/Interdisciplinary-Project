@@ -38,4 +38,33 @@ export default class AddItemPage {
             </section>
         `;
   }
+
+  async addItem() {
+    let itemName = document.querySelector("#item-name").value;
+    let itemDescription = document.querySelector("#item-description").value;
+    let itemPrice = document.querySelector("#item-price").value;
+    let itemImage = document.querySelector("#item-image").value;
+
+    const item = {
+      itemName,
+      itemDescription,
+      itemPrice,
+      itemImage,
+    };
+    console.log(item);
+
+    const response = await fetch(
+      "http://localhost:3000//backend/backend.php?action=additem",
+      {
+        method: "POST",
+        body: JSON.stringify(item),
+      }
+    );
+
+    const data = await response.text();
+    console.log(data);
+    if (data.additem) {
+      navigateTo("#/feed");
+    }
+  }
 }

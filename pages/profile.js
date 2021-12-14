@@ -1,5 +1,5 @@
 import service from "../service.js";
-import router from "../router.js";
+import Router from "../router.js";
 
 export default class ProfilePage {
   constructor(domElement) {
@@ -59,5 +59,13 @@ export default class ProfilePage {
 
   beforeShow(props) {
     console.log(props);
+  }
+
+  logout() {
+    //reset localStorage
+    localStorage.removeItem("userIsAuthenticated");
+    localStorage.removeItem("authUser");
+    //navigate to login
+    Router.navigateTo("#/login");
   }
 }

@@ -1,5 +1,6 @@
 // import nav from "../components/nav.js";
 import service from "../service.js";
+import Router from "../router.js";
 
 export default class LoginPage {
   constructor(domElement) {
@@ -31,5 +32,27 @@ export default class LoginPage {
 
   beforeShow() {
     nav.hide();
+  }
+
+  async login() {
+    const email = document.querySelector("#login-email").value;
+    const password = document.querySelector("#login-password").value;
+    const loginObject = { email: email, password: password };
+    console.log(loginObject);
+    const response = await fetch(
+      "http://localhost:3000//backend/backend.php?action=login",
+      {
+        method: "POST",
+        body: JSON.stringify(loginObject),
+      }
+    );
+
+    const data = await response.json();
+    console.log(data);
+    if (data.authenticated) {
+      localStorage.setItem("userIsAuthenticated", true);
+      localStorage.setItem("authUser", JSON.stringify(data.userData));
+      Router.navigateTo("#/feed");
+    }
   }
 }
